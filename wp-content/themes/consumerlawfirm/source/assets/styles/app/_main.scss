@@ -1,0 +1,57 @@
+.easy_t_single_testimonial .easy_testimonial_title {
+    font-weight: 700;
+    clear: right;
+    float: none;
+    margin-bottom: 0px;
+}
+
+.testimonials {
+    padding: 50px 0;
+    blockquote {
+        background-color: transparent;
+    }
+    blockquote::before {
+        // text-align: right;
+        color: #ED5A5A;
+    }
+    .easy-t-cycle-pager span.cycle-pager-active {
+        color: #ED5A5A;
+    }
+    .easy-t-cycle-pager span {
+        font-size: 30px;
+    }
+    .cycle-prev,
+    .cycle-next {
+        display: none;
+    }
+    blockquote.easy_testimonial .wp-post-image {
+        border-radius: 50%;
+    }
+}
+
+.news-ticker {
+    display: none;
+}
+
+.contact {
+    padding-top: 110px;
+    background: #f5f5f5;
+}
+
+.video-box {
+    padding: 110px 0 70px;
+}
+
+main {
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 320px) {
+.header-buttons {
+        margin-top: 100px !important;
+        .left-button {
+            color: #22394C;
+            border-color: #22394C; 
+        }
+    }
+}

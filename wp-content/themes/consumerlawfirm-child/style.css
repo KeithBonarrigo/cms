@@ -1,0 +1,141 @@
+/*
+ Theme Name:   Consumer Rights Child
+ Description:  Consumer Rights Child Theme Child
+ Author:       Matt Garza
+ Template:     consumerlawfirm
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  consumerlawfirm-child
+*/
+/*--nav bar--*/
+.menu-item-has-children:after { font-family: 'Font Awesome\ 5 Free' !important; font-weight: bold !important; right:10px !important }
+#menu-item-154 .menu-item-has-children:after { right:3px !important; }
+
+.banner { height:320px; }
+.entry-content { margin-top:0px !important; }
+
+.site-main ul#rec-news { list-style: none !important; }
+ul#rec-news li.rec-news-link:before { /*content: "\\25BA \\0020" !important;*/font-family: 'Font Awesome\ 5 Free' !important; font-weight: bold !important; content: '\f15c' !important; }
+li.rec-news-link { margin:5px 0px 5px 10px !important; }
+a.rec-news-link { color:#666; margin:5px 0px; font-size:16px; }
+
+.blog-container .entry-content { margin-top:22px !important; border:1px solid #f3f2f2; padding:0px; background-color: #efeef0; }
+.blog-container-posts { margin-top:22px !important; }
+.blog-container-posts .entry-content { border:0px solid #f3f2f2; }
+.blog-container-posts .hentry { margin-bottom: 5px; }
+.blog-container-posts h1 { font-size: 22px; }
+
+.blog-container .widget-area { width: 100%;  }
+.blog-container .widget { margin-top:22px; padding: 0px 3px 3px 3px; background-color: #efeef0; }
+.blog-container .col-sm-6 p { margin-bottom: 3px }
+.blog-container .wpcf7-textarea { height: 150px !important; }
+.blog-container .wp-video { padding:0px 5px; }
+
+.col-md-4 .widget { padding:0px; }
+
+
+.blog-container .blog-h4 { background-color:#333 !important; font-weight: bold !important; letter-spacing: 1px; color:#FFF !important; padding:7px !important; }
+
+.blog-container .blog-h4 { background-color:#333 !important; font-weight: bold !important; letter-spacing: 1px; color:#FFF !important; padding:7px !important; }
+.blog-container input[type="text"], .blog-container input[type="email"], .blog-container input[type="url"], .blog-container input[type="password"], input[type="search"], .blog-container select, .blog-container textarea { padding:3px; background-color: #FFF; }
+.blog-container input[type="submit"] { padding:5px 15px; margin-top:12px; margin-left:5px; }
+
+
+.facebook_left, .twitter_left, .gplus_left, .linkedin_left, .email_left {
+    width: 245px;
+    height: 389px;
+    position: fixed;
+    left: -320px;
+    z-index: 99997;
+}
+.facebook_left { top:220px }
+.twitter_left { top:290px }
+/*.gplus_left { top:356px }*/
+.gplus_left { top:315px }
+.twitter_left { top:268px }
+                    
+.facebook_left #facebook_icon, .twitter_left #twitter_icon, .gplus_left #gplus_icon, .linkedin_left #linkedin_icon, .email_left #email_icon{
+    float: right;
+    /*height: 90px;
+    width: 60px;*/
+    right: -60px;
+    cursor: pointer;
+    position: relative;
+    z-index: 99998;
+    background-size: 40px 46px; 
+    height:48px; 
+    width:40px;
+}
+
+.facebook_left #facebook_icon { background: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/tran-fb-logo.png') no-repeat; }
+.twitter_left #twitter_icon { background: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/trans-twitter-logo.png') no-repeat; }
+.gplus_left #gplus_icon { background: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/gplus.jpg') no-repeat; }
+.linkedin_left #linkedin_icon { top:362px; background-image: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/linked_in_logo.png'); background-repeat:no-repeat;  }
+.email_left #email_icon { top: 410px; background-image: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/email-icon-trans.png'); background-repeat:no-repeat; background-size:44px 50px;  }
+.side-social { border-radius:0px 7px 7px 0px; }
+
+.facebook_right #facebook_icon {
+    float: left;
+    height: 60px;
+    width: 34px;
+    left: -34px;
+    background: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/fb-icon.png') no-repeat;
+    cursor: pointer;
+    position: relative;
+    z-index: 99998;
+}
+.facebook_right .facebook_box {
+    background-color: #FFFFFF;
+    border: 4px solid #3B5998;
+    float: right;
+    top: -60px;
+    position: relative;
+    z-index: 99999;
+}
+.facebook_left .facebook_box {
+    background-color: #FFFFFF;
+    border: 4px solid #3B5998;
+    float: left;
+    top: -60px;
+    position: relative;
+    z-index: 99999;
+}
+/*--social media slider--*/
+video { display: inline-block !important; }
+
+@media (max-width: 768px){ 
+    .videobox{ display:block !important; margin-right: 0 !important; width: 100%; }
+    .wp-video{ width: 100%; max-width: 100%; }
+}
+
+/* Desktops and laptops */
+@media only screen and (min-width : 1224px) {
+ 
+}
+ 
+/* Large screens */
+@media only screen and (min-width : 1824px) {
+ 
+}
+
+ 
+/* Tablets (landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+   
+}
+ 
+/* Tablets (portrait) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+ 
+}
+ 
+/* Smartphones (landscape) */
+@media only screen and (min-width : 321px) {
+    
+}
+ 
+/* Smartphones (portrait) */
+@media only screen and (max-width : 320px) {
+ 
+}

@@ -1,0 +1,68 @@
+// Base styles here
+// mozilla firefox 
+::-moz-selection {
+    color: $clr-sec;
+    background: $clr-pri;
+    text-shadow: none;
+}
+
+// webkit, opera, IE9 
+::selection {
+    color: $clr-sec;
+    background: $clr-pri;
+    text-shadow: none;
+}
+
+// placeholders' styles
+::-webkit-input-placeholder {
+    color: $clr-sec;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: $clr-sec;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $clr-sec;
+}
+
+:-ms-input-placeholder {
+    color: $clr-sec;
+}
+body {
+    background-color: $bg-body;
+    color: $clr-body;
+    font-family: $font-pri;
+    font-weight: 400;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    // color: $black;
+}
+
+.site-main {
+	ul {
+	    list-style-type: none;
+	    @include list-counter(disc) {
+	        color: #ED5A5A;
+	        font-size: 20px;
+	        margin-right: 10px;
+	        line-height: 100%;
+	    }
+	    li {}
+	    ul {
+	        padding-left: 20px;
+	        // @include list-counter(square);
+	        ul {
+	            padding-left: 40px;
+	            @include list-counter(circle);
+	        }
+	    }
+	}
+}
