@@ -32,12 +32,17 @@
          
         <?php wp_head(); ?>
         <style>
-        .facebook_left #facebook_icon, .twitter_left #twitter_icon, .linkedin_left #linkedin_icon, .gplus_left #gplus_icon, .email_left #email_icon { background-size: 40px 46px; height:48px; width:40px;  }
-        .twitter_left #twitter_icon {  }
-        .gplus_left #gplus_icon { }
-        .linkedin_left #linkedin_icon { top:362px; background-image: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/linked_in_logo.png'); background-repeat:no-repeat;  }
-        .email_left #email_icon { top: 410px; background-image: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/email-icon-trans.png'); background-repeat:no-repeat; background-size:44px 50px;  }
+        .facebook_left, .twitter_left, .linkedin_left, .gplus_left, .email_left { margin-bottom:2px; position:relative; top:0px; left:0px; height:35px !important; width:30px !important;  }
+        .facebook_left #facebook_icon, .twitter_left #twitter_icon, .linkedin_left #linkedin_icon, .gplus_left #gplus_icon, .email_left #email_icon { background-size: 30px 35px; height:35px; width:30px; right:0px !important  }
+        /*.twitter_left { top:268px }
+        .gplus_left { top:315px }
+        .email_left { top:410px }*/
+        .email_icon { top:0px }
+        .linkedin_left #linkedin_icon { top:0px; background-image: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/linked_in_logo.png'); background-repeat:no-repeat;  }
+        .email_left #email_icon { top: 0px; background-image: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/email-icon-trans.png'); background-repeat:no-repeat; /*background-size:44px 50px;*/  }
         .side-social { border-radius:0px 7px 7px 0px; }
+        .has-social { display:none !important}
+        .social-container { width: 35px; height: 389px; position: fixed; left: -35px; top:260px; z-index: 99997; }
 
         .contact-area .contact-block { font-family:'EB Garamond'; font-weight:bold; letter-spacing: 1px; }
         .contact-info-holder { width:420px !important }
@@ -106,7 +111,7 @@
     </head>
     <body <?php body_class(); ?>>
     
-    <div class="facebook_left">
+    <!--<div class="facebook_left">
         <div id="facebook_icon" style="height:48px !important; width:40px !important"></div>
     </div>
     <div class="twitter_left">
@@ -120,15 +125,35 @@
 	</div>
 	<div class="email_left">
 		<div id="email_icon" class="side-social"></div>
+	</div>-->
+    <div class='social-container'>
+		<div class="facebook_left">
+			<div id="facebook_icon" class="side-social"></div>
+		</div>
+		<div class="twitter_left">
+			<div id="twitter_icon" class="side-social"></div>
+		</div>
+		<div class="gplus_left">
+			<div id="gplus_icon" class="side-social"></div>
+		</div>
+		<div class="linkedin_left">
+				<div id="linkedin_icon" class="side-social"></div>
+		</div>
+		<div class="email_left">
+			<div id="email_icon" class="side-social"></div>
+		</div>
 	</div>
+
 
     <script>
         jQuery(document).ready(function($) {
-            $(".facebook_left").animate({left: "-265" }, 1300 );
+            /*$(".facebook_left").animate({left: "-265" }, 1300 );
             $(".twitter_left").animate({left: "-265" }, 1300 );
             $(".gplus_left").animate({left: "-265" }, 1300 );
             $(".linkedin_left").animate({left: "-265" }, 1300 );
-            $(".email_left").animate({left: "-265" }, 1300 );
+            $(".email_left").animate({left: "-265" }, 1300 );*/
+            $(".social-container").animate({left: "0" }, 1300 );
+
 
             $(".facebook_left").click(function(){
                 window.open("https://www.facebook.com/ConsumerRightsLawFirm", 'fb');
