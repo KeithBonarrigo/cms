@@ -34,10 +34,7 @@
         <style>
         .facebook_left, .twitter_left, .linkedin_left, .gplus_left, .email_left { margin-bottom:2px; position:relative; top:0px; left:0px; height:35px !important; width:30px !important;  }
         .facebook_left #facebook_icon, .twitter_left #twitter_icon, .linkedin_left #linkedin_icon, .gplus_left #gplus_icon, .email_left #email_icon { background-size: 30px 35px; height:35px; width:30px; right:0px !important  }
-        /*.twitter_left { top:268px }
-        .gplus_left { top:315px }
-        .email_left { top:410px }*/
-        .email_icon { top:0px }
+        /* .email_icon { top:0px } */
         .linkedin_left #linkedin_icon { top:0px; background-image: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/linked_in_logo.png'); background-repeat:no-repeat;  }
         .email_left #email_icon { top: 0px; background-image: url('https://consumerlawfirmcenter.com/cms/wp-content/uploads/2018/11/email-icon-trans.png'); background-repeat:no-repeat; /*background-size:44px 50px;*/  }
         .side-social { border-radius:0px 7px 7px 0px; }
