@@ -29,9 +29,13 @@ get_header(); ?>
             <div class="col-md-6  blog-container-posts">
 
                 <?php
+                $this_category = get_queried_object();
+                $cat = get_the_category();
+                //echo $cat[0]->cat_name;
                 $posts = new WP_Query(array(
                     'post_type' => 'post',
                     'posts_per_page' => -1,
+                    'category_name' => $this_category->slug
                 ));
                 if($posts->have_posts()):
                     while ( $posts->have_posts() ) : $posts->the_post(); ?>
