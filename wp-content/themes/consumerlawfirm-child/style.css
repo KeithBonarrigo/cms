@@ -25,6 +25,9 @@ a.rec-news-link { color:#666; margin:5px 0px; font-size:16px; }
 .blog-container-posts .entry-content { border:0px solid #f3f2f2; }
 .blog-container-posts .hentry { margin-bottom: 5px; }
 .blog-container-posts h1 { font-size: 22px; }
+.blog-container-posts h2 { font-size: 20px !important; margin-top:17px; }
+.blog-container-posts h3 { font-size: 18px !important; margin-top:17px; }
+
 
 .blog-container .widget-area { width: 100%;  }
 .blog-container .widget { margin-top:22px; padding: 0px 3px 3px 3px; background-color: #efeef0; }
