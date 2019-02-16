@@ -19,7 +19,7 @@ remove_filter('the_content', 'wpautop');
  */
 
 function add_jquery_ui() {
-    wp_enqueue_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/jquery-ui.min.js', false, '1.8.8');
+    wp_enqueue_script('jquery-ui', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/jquery-ui.min.js', false, '1.8.8');
 }
 add_action( 'init', 'add_jquery_ui' );
 

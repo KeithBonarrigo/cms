@@ -13,7 +13,17 @@
 	
 		</div>
 	</div><!-- #content -->
-	
+	<script>
+		jQuery(document).ready(function($) {
+			$("a").each(function() {
+   				 //test each link for the presence of the home domain  
+				var href = $(this).attr('href');
+				if (href != undefined && (href.indexOf("consumerlawfirmcenter.com") < 0 || href.indexOf("#") < 0)){ //this is an external link - set it to 'nofollow'
+					$(this).attr('rel', 'nofollow');
+				}
+			});
+		});
+	</script>
 
 	<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
 		<?php get_sidebar('footer'); ?>
