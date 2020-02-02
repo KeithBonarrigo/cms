@@ -32,57 +32,23 @@
     					isMobile = true;
 				}
 				//end test for mobile	
-			if(isMobile){
-				/*
-					console.log('moving now');
-					var i = 0;
-					while(i<10){
-						var elementExists = document.getElementById("chat-widget-container");
-						//console.log($("#chat-widget").length);
-						console.log('ytrski');
-						console.log(elementExists);
-						i++;
-					}
-					console.log($("#chat-widget").length);
-					$("#chat-widget-container iframe").appendTo("#mobile-live-chat");
-					$("#mobile-live-chat").append($("#chat-widget-container iframe"));
-				*/
-			}
 			
 			
 			$('.cta').each(function() {
-				
 				var banner_width = $('#homepage-banner').width();
 				var cta_width = $('.cta').width();
-
-				//console.log(banner_width);
 				var button_width = banner_width * .13;
 				var font_size = banner_width * .012;
 				font_clean = Math.floor(font_size);
-				//console.log(font_clean);
 				var font_clean_string = font_clean + 'px !important';
 				$('.cta').css({ 'font-size': font_clean_string });
 
-
 				var banner_height = $('#homepage-banner').height();
-				//console.log(banner_height);
-
 				var height_to_set_cta = banner_height * .77;
 				var right_to_set_cta = banner_width * .02;
-				//console.log(height_to_set_cta);
 				
 				$(this).css({top: height_to_set_cta, right:right_to_set_cta });
 				var ht_to_set = banner_height;
-				//console.log(ht_to_set);
-
-				//$('.banner').css({height: ht_to_set });
-				//$('.container').css({height: ht_to_set });
-				//console.log($('.banner').height());
-				
-
-				
-
-
    			});
 		}); 
 	</script>
@@ -100,8 +66,6 @@
 				<?php dynamic_sidebar('newsletter' ); ?>
 				<div class="copyrights">
 					© Copyright 2010-2018 Consumer Rights Law Firm, PLLC All rights reserved.
-					<!--<br>
-					Website by <a href="http://aykays.com">Aykays</a>-->
 				</div>
 			</div>
 		</div><!--.container-->
@@ -109,11 +73,24 @@
 <!--</div> #page -->
 <?php wp_footer(); ?>
 
+<div id="whiteboard_overlay" style="display:none"></div>
+<div id="whiteboard_new" style="display:none">
+    <div id="whiteboard-close"><a id="whiteboard-close-x">X</a></div>
+	<div id="whiteboard-title"></div>
+	<div id="whiteboard-content"></div>
+</div>
 
-<script type="text/javascript" defer="defer">
+<script>
+	function setCookie(cname, cvalue, exdays) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+
 	jQuery(function($) {
-		// new WOW().init();
-		wow = new WOW({
+		////////////////////////////////////////////////////
+		wow = new WOW({ // new WOW().init();
 			boxClass:     'animate',      // default: wow
 			animateClass: 'animated', // default
 			offset:       0,          // default
@@ -121,154 +98,117 @@
 			live:         true        // default
 		});
 		wow.init();
-	});
-</script>
-<!--<div id="mobile-lower" style='text-align:left; padding-top:7px;'>
-	<div class='mobile-button-container'><i class='fas fa-gavel' style='color:#ed5a5a'></i>&nbsp;&nbsp;<?php echo do_shortcode('[wp_colorbox_media url="https://consumerlawfirmcenter.com/file-a-complaint/" type="iframe" hyperlink="File a Complaint With Us"]') ?></div>
-	<br />
-	
-</div>-->
-<style>
-    #whiteboard_overlay { padding:0px; margin:0px;  background-color:#333; opacity:.75;  position:absolute; width:100%; height:100%; top:0; left:0; z-index:109990; }
-    #whiteboard_new { background-color:#FFF; position:absolute; top:25%; z-index:110000; width:500px; height:50%; min-height:370px;  margin:auto auto; }
-    #whiteboard-close-x { float:right; padding:3px 10px 3px 0px; background-color: #FFF; text-decoration:none !important; color:#000 !important; font-weight: bold; }
-    #whiteboard-title { padding:5px 0px 0px 7px; font-weight:bold; color:#000; }
-</style>
-<div id="whiteboard_overlay" style="display:none">
-    
-</div>
-<div id="whiteboard_new" style="display:none">
-    <div id="whiteboard-close"><a id="whiteboard-close-x">X</a></div>
-    <div id="whiteboard-title">How We Work For You</div>
-</div>
-<script>
-jQuery("#home-banner-free-case-review").click(function() { 
-                	/*$("#home-banner-free-case-review").animate({ 
-                    		width: "300px" 
-                	}); 
-                	$("#home-banner-free-case-review").animate({ 
-                    		height: "300px" 
-                	});*/
-			console.log("heyhi");
-            	}); 
-</script>
-<script>
-	/*// Returns width of browser viewport
-	var bwidth = jQuery('.mobile-button-container').width();
-	var swidth = jQuery('.site-footer').width();
-	var margintoset = (swidth - bwidth)/2;
-	jQuery('.mobile-button-container').css('margin-left',margintoset+'px');
-
-	jQuery('.mobile-button-container').click(function() {
-  		jQuery('#chat-widget-container').css('z-index', 12);
-	});*/
-</script>
-<script>
-	jQuery('.mobile-button-container').click(function() {
-  		jQuery('#chat-widget-container').css('z-index', 12);
-	});
-
-    jQuery('#whiteboard-open').click(function() {
-	var w = jQuery( window ).width();
-	if(w >= 500){
-	   var vid_html = '<video class="wp-video-shortcode whiteboard-video" id="video-12-1" width="500" height="350" style="display:inline-block !important;" preload="metadata" controls="controls"><source type="video/mp4" src="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2019/05/Whiteboardmp4.mp4?_=1"><a href="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4">https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4</a></video>';
-	}else {
-	   jQuery('#whiteboard_new').css("width", "300px");
-	   jQuery('#whiteboard_new').css("height", "245px");
-
-	   jQuery('#whiteboard_new').css("min-height", "245px");
-	   jQuery('#whiteboard_new').css("margin-left", "auto");
-	   jQuery('#whiteboard_new').css("margin-right", "auto");
-	   var vid_html = '<video style="width:300px !important" class="wp-video-shortcode whiteboard-video" id="video-12-1" width="300" height="245" style="display:inline-block !important;" preload="metadata" controls="controls"><source type="video/mp4" src="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2019/05/Whiteboardmp4.mp4?_=1"><a href="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4">https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4</a></video>';
-	}	
-
-        //if(jQuery('#whiteboard_new').contains(".wp-video-shortcode")){
-        
-        if (!jQuery('#whiteboard_new').find('.wp-video-shortcode').length) {
-            jQuery('#whiteboard_new').append(vid_html);
-	    
- 	    
-	    
-        }
-        // Returns width of browser viewport
-	var overlay_width = jQuery('#whiteboard_overlay').width();
-	var whiteboard_width = jQuery('#whiteboard_new').width();
-	var margintoset = (overlay_width - whiteboard_width)/2;
-	jQuery('#whiteboard_new').css('margin-left',margintoset+'px');
-  	jQuery('#whiteboard_new').fadeIn( "slow" );
-        jQuery('#whiteboard_overlay').fadeIn( "slow" );
-	jQuery(".whiteboard-video").each(function () { this.play() });
-	});
-    jQuery('#whiteboard-close-x').click(function() {
-		jQuery("video").each(function () { this.pause() });
-  		jQuery('#whiteboard_new').fadeOut( "slow" );
-        jQuery('#whiteboard_overlay').fadeOut( "slow" );
-	});
-</script>
-<script>
-	jQuery('.mobile-button-container').click(function() {
-  		jQuery('#chat-widget-container').css('z-index', 12);
-	});
-    
-    
-
-
-    jQuery('.dslc-icon-ei-icon_search').click(function() {
-	
-	var w = jQuery( window ).width();
-	if(w >= 500){
-	   var vid_html = '<video class="wp-video-shortcode whiteboard-video" id="video-12-1" width="500" height="350" style="display:inline-block !important;" preload="metadata" controls="controls"><source type="video/mp4" src="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2019/05/Whiteboardmp4.mp4?_=1"><a href="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4">https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4</a></video>';
-	   var vid_html = '<div style="text-align:center"><form style="margin:20px 15px" class="wp-video-shortcode whiteboard-video" action="" method="get"><input id="s" name="s" type="text" value="" /><input style="padding: 5px !important" type="submit" value="search" /></form></div>';
-	}else {
-	   jQuery('#whiteboard_new').css("width", "300px");
-	   jQuery('#whiteboard_new').css("height", "100px");
-
-	   jQuery('#whiteboard_new').css("min-height", "100px");
-	   jQuery('#whiteboard_new').css("margin-left", "auto");
-	   jQuery('#whiteboard_new').css("margin-right", "auto");
-	   var vid_html = '<video style="width:300px !important" class="wp-video-shortcode whiteboard-video" id="video-12-1" width="300" height="245" style="display:inline-block !important;" preload="metadata" controls="controls"><source type="video/mp4" src="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2019/05/Whiteboardmp4.mp4?_=1"><a href="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4">https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4</a></video>';
-	   var vid_html = '<form style="margin:20px 15px" class="wp-video-shortcode whiteboard-video" action="" method="get"><input id="s" name="s" type="text" value="Search Term" /><input style="padding: 5px !important" type="submit" value="search" /></form>';
-	}	
-        
-        if (!jQuery('#whiteboard_new').find('.wp-video-shortcode').length) {
-            jQuery('#whiteboard_new').append(vid_html);
-	    
- 	    
-	    
-        
-        // Returns width of browser viewport
-	var overlay_width = jQuery('#whiteboard_overlay').width();
-	var whiteboard_width = jQuery('#whiteboard_new').width();
-	var margintoset = (overlay_width - whiteboard_width)/2;
-	jQuery('#whiteboard_new').css('margin-left',margintoset+'px');
-	jQuery('#whiteboard_new').css('height','150px');
-	jQuery('#whiteboard_new').css('min-height','150px');
-
-
-
-  	jQuery('#whiteboard_new').fadeIn( "slow" );
-        jQuery('#whiteboard_overlay').fadeIn( "slow" );
-	jQuery('#whiteboard-title').html('Search Our Site');
-	}
-	});
-    jQuery('#whiteboard-close-x').click(function() {
-		jQuery("video").each(function () { this.pause() });
-  		jQuery('#whiteboard_new').fadeOut( "slow" );
-        jQuery('#whiteboard_overlay').fadeOut( "slow" );
-	});
+		////////////////////////////////////////////////////
+		function fadeWhiteboard(fadeDirection, fadeSpeed){
+			if(fadeDirection == 'out'){
+				jQuery('#whiteboard_new').fadeOut( fadeSpeed );
+				jQuery('#whiteboard_overlay').fadeOut( fadeSpeed );
+			}else if(fadeDirection == 'in'){
+				jQuery('#whiteboard_new').fadeIn( fadeSpeed );
+				jQuery('#whiteboard_overlay').fadeIn( fadeSpeed );
+			}
+		}
+		////////////////////////////////////////////////////
+		$('.mobile-button-container').click(function() { $('#chat-widget-container').css('z-index', 12); });
+		////////////////////////////////////////////////////
+		$('#whiteboard-close-x').click(function() {
+			$("video").each(function () { this.pause() });
+			fadeWhiteboard('out', 'slow');
+		});
+		////////////////////////////////////////////////////
+		$('#whiteboard-open').click(function() {
+			var w = $( window ).width();
+			$('#whiteboard-title').html("How We Work for You");	
+				if(w >= 500){
+					var vid_html = '<video class="wp-video-shortcode whiteboard-video" id="video-12-1" width="500" height="350" style="display:inline-block !important;" preload="metadata" controls="controls" muted="muted"><source type="video/mp4" src="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2019/05/Whiteboardmp4.mp4?_=1"><a href="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4">https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4</a></video>';
+				}else {
+					$('#whiteboard_new').css({"width":"300px", "height":"245px", "min-height":"245px", "margin-left": "auto", "margin-right":"auto" });
+					var vid_html = '<video style="width:300px !important" class="wp-video-shortcode whiteboard-video" id="video-12-1" width="300" height="245" style="display:inline-block !important;" preload="metadata" controls="controls" muted="muted"><source type="video/mp4" src="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2019/05/Whiteboardmp4.mp4?_=1"><a href="https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4">https://consumerlawfirmcenter.com/cms/wp-content/uploads/2016/05/v1_x264.mp4</a></video>';
+				}	
+				
+			$('.blog-quiz-back').css({"display": "none"});
+			$('#whiteboard-content').html(vid_html);
+			// Returns width of browser viewport
+			var overlay_width = $('#whiteboard_overlay').width();
+			var whiteboard_width = $('#whiteboard_new').width();
+			var margintoset = (overlay_width - whiteboard_width)/2;
+			$('#whiteboard_new').css('margin-left',margintoset+'px');
+			fadeWhiteboard('in', 'slow');
+				
+				if($(".whiteboard-video").length ) { //play the video if present
+					$(".whiteboard-video").each(function () { this.play() });
+				}
+		});
+		//////////////////////////////////////////////////////
+		$('#whiteboard-close-x').click(function() {
+				$("video").each(function () { this.pause() });
+				fadeWhiteboard('out', 'slow');
+		});
+		//////////////////////////////////////////////////////
+		$('.blog-question-cancel, .whiteboard-cookie-close').on('click', function(e) {
+			fadeWhiteboard('out', 'slow');
+			setCookie("blog-quiz-presented", "true", 7);
+			$('#whiteboard_new').css("display", "none");
+			$('.whiteboard-video').show();
+			$('.blog-quiz-back').hide();
+		});
+		//////////////////////////////////////////////////////
+		$('.dslc-icon-ei-icon_search').click(function() {
+			var w = jQuery( window ).width();
+			console.log('search');
+			if(w >= 500){
+				var vid_html = '<div style="text-align:center"><form style="margin:20px 15px" class="wp-video-shortcode whiteboard-video" action="" method="get"><input id="s" name="s" type="text" value="" /><input style="padding: 5px !important" type="submit" value="search" /></form></div>';
+			}else {
+				var vid_html = '<form style="margin:20px 15px" class="wp-video-shortcode whiteboard-video" action="" method="get"><input id="s" name="s" type="text" value="Search Term" /><input style="padding: 5px !important" type="submit" value="search" /></form>';
+				$('#whiteboard_new').css({"width": "300px", "min-height": "100px", "margin-left": "auto", "margin-right": "auto"});
+			}	
+			
+			$('#whiteboard-content').html(vid_html); 
+			// Returns width of browser viewport
+			var overlay_width = $('#whiteboard_overlay').width();
+			var whiteboard_width = $('#whiteboard_new').width();
+			var margintoset = (overlay_width - whiteboard_width)/2;
+			$('#whiteboard_new').css('margin-left',margintoset+'px');
+			$('#whiteboard_new').css({'height':'150px', 'min-height':'150px' });
+			fadeWhiteboard('in', 'slow');
+			$('#whiteboard-title').html('Search Our Site');
+		});
+		//////////////////////////////////////////////////////
+		<?php
+		if (is_blog()) { 
+			if( !isset($_COOKIE['blog-quiz-presented']) || $_COOKIE['blog-quiz-presented'] == 'false' ) { 
+			?>
+					var quiz_html = '<div class="blog-quiz-back" id="quiz" width="500" height="350" style="display:inline-block !important;"><div class="blog-quiz-text">Are you being contacted by a debt collection agency,<br /> bank or marketing company?</div><div class="blog-quiz-subtext">Take our survey and get our free guide to<br />handling debt collection agencies!</div><div class="blog-question-buttons"><div class="blog-question-start">Start</div><div class="blog-question-cancel">Cancel</div></div></div>';
+					$("#whiteboard-open").click();
+					$('#whiteboard-title').html("");
+					$('.whiteboard-video').hide();
+					$("#whiteboard-content").html(quiz_html);
+					$('.blog-quiz-back').show();
+					$('#whiteboard-close-x').addClass('whiteboard-cookie-close');
+					setCookie("blog-quiz-presented", "true", 7);
+					//////////////////////////////////////////////////////
+					$('.blog-question-start').on('click', function(e) {
+						console.log('go');
+						setCookie("blog-quiz-presented", "true", 7);
+						window.location.href = "https://consumerlawfirmcenter.com/harassment-form/#blog-form-top";
+					});
+					//////////////////////////////////////////////////////
+				<?
+			}
+		 } ?>
+		//////////////////////////////////////////////////////
+	}); //end jQuery(function)
 </script>
 
 <!-- Start of LiveChat (www.livechatinc.com) code -->
 <script type="text/javascript" defer="defer">
-
-window.__lc = window.__lc || {};
-window.__lc.license = 8632579;
-(function() {
-  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-})();
-
+	window.__lc = window.__lc || {};
+	window.__lc.license = 8632579;
+	(function() {
+	var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	})();
 </script> 
 <!-- End of LiveChat code -->
 </body>
